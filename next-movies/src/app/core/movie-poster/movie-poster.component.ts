@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, ViewChild} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MovieModel} from '../models/movie-model';
 
 @Component({
@@ -10,9 +10,5 @@ export class MoviePosterComponent {
 
   constructor() { }
 
-  @ViewChild('title')
-  title: ElementRef;
-
   @Input() movie: MovieModel;
-
 }
