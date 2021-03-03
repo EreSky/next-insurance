@@ -1,0 +1,24 @@
+<div class="toolbar justify-content-between">
+  <div class="pl-3 flex-grow-1">
+    <button (click)="goBack()" class="btn btn-outline-primary back-btn">Back to All</button>
+  </div>
+  <div class="flex-grow-1" [appDecodeHtml]="movie.title"></div>
+</div>
+
+<div class="mt-4 ml-3 d-flex">
+  <div>
+    <img [src]="movie.largeimage">
+  </div>
+  <div class="ml-3">
+    <span>Rating: {{movie.rating}}  </span>
+    <ngb-rating [(rate)]="movie.rating"
+                [readonly]="true"></ngb-rating>
+    <div>Released: {{movie.released}}</div>
+    <div>Runtime: {{movie.runtime}}</div>
+    <span>Synopsis:  </span>
+    <span [appDecodeHtml]="movie.synopsis"></span>
+    <div>
+      <a class="btn btn-link text-info p-0" href="https://www.imdb.com/title/{{movie.imdbid}}">IMDb</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="poster">
+  <img [src]="movie.image"
+       routerLink="{{movie.id}}"
+       class="grow pointer">
+  <div [appDecodeHtml]="movie.title"></div>
+</div>
+

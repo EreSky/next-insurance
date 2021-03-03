@@ -1,0 +1,11 @@
+<div class="d-flex flex-grow-1 justify-content-end flex-align-items-center">
+  <div class="min-rate-label">Minimum Rate:</div>
+  <ngb-rating [(rate)]="rateValue"
+              class="ml-2 mr-2"
+              (rateChange)="onRateChanged($event)"></ngb-rating>
+  <input #search
+         class="form-control-sm"
+         type="text"
+         placeholder="Search Title"
+         [(ngModel)]="searchTerm">
+</div>
